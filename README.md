@@ -87,8 +87,8 @@ O código para cadastro de pessoas usuárias deve ser criado por você utilizand
 ---
 
 ## Data de Entrega
-  - Será `X` dia de projeto.
-  - Data de entrega para avaliação final do projeto: `01/03/2022 14:00`.
+  - Serão `2` dias de projeto.
+  - Data de entrega para avaliação final do projeto: `02/03/2022 14:00`.
 
 ---
 
