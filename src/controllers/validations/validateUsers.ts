@@ -11,7 +11,6 @@ const validUserName = (req: Request, res: Response, next: NextFunction) => {
 
   if (username.length < 3) return res.status(422)
     .json({ error: 'Username must be longer than 2 characters' });
-  console.log('entrou user name')
 
   next();
 };
@@ -28,7 +27,6 @@ const validClass = (req: Request, res: Response, next: NextFunction) => {
   if (classe.length < 3) return res.status(422)
     .json({ error: 'Classe must be longer than 2 characters' });
 
-  console.log('entrou class')
   next();
 };
 
@@ -43,7 +41,6 @@ const validLevel = (req: Request, res: Response, next: NextFunction) => {
   if (typeof (level) !== 'number') return res.status(422)
     .json({ error: 'Level must be a number' });
 
-  console.log('entrou level')
   next();
 };
 
@@ -57,7 +54,6 @@ const validPassword = (req: Request, res: Response, next: NextFunction) => {
 
   if (password.length < 8) return res.status(422)
     .json({ error: 'Password must be longer than 7 characters' });
-  console.log('entrou password');
 
   next();
 };
