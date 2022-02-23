@@ -1,7 +1,7 @@
 import express from 'express';
+import dotenv from 'dotenv';
 import users from './controllers/users';
 import login from './controllers/login';
-import dotenv from 'dotenv';
 
 dotenv.config();
 

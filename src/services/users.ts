@@ -1,4 +1,4 @@
-import { User } from "../interfaces/User";
+import { User } from '../interfaces/User';
 import { sign } from '../utils/jwt';
 import usersModel from '../models/usersModel';
 
