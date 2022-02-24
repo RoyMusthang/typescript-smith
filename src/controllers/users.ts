@@ -1,7 +1,8 @@
 import { Router, Request, Response } from 'express';
 import rescue from 'express-rescue';
-import { User } from '../interfaces/User';
 import StatusCode from '../enums/StatusCode';
+import { User } from '../interfaces/User';
+
 import service from '../services/users';
 import validateUser from './validations/validateUsers';
 
