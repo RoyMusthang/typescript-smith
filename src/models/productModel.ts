@@ -14,3 +14,9 @@ export const insertProduct = async (product: Product): Promise<Product> => {
     amount,
   };
 }
+
+export const findAllProduct = async () => {
+  const query = 'SELECT * FROM Trybesmith.Products;'
+  const [result] = await connection.execute<ResultSetHeader>(query);
+  return result;
+};
