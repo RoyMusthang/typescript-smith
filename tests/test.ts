@@ -245,7 +245,7 @@ describe("2 - Crie um endpoint para o login de pessoas usuárias", () => {
   });
 });
 
-describe.skip("3 - Crie um endpoint para o cadastro de produtos", () => {
+describe("3 - Crie um endpoint para o cadastro de produtos", () => {
   let token: string;
   // Clean database and create one user before tests
   beforeEach((done) => {
