@@ -27,6 +27,7 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-mocha": "^9.0.0",
     "eslint-plugin-sonarjs": "^0.10.0",
+    "git-commit-msg-linter": "^4.1.0",
     "jest": "^27.3.1",
     "nodemon": "^2.0.14",
     "supertest": "^6.1.6",
@@ -38,6 +39,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
+    "express-rescue": "^1.1.31",
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.0"
   }
