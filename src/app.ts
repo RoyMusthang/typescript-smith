@@ -15,5 +15,5 @@ app.use('/users', users);
 app.use('/login', login);
 app.use('/products', product);
 
-app.use('/', domainError)
+app.use('/', domainError);
 export default app;

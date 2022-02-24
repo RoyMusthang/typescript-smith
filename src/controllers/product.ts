@@ -1,29 +1,32 @@
-import { Router } from "express";
-import rescue from "express-rescue";
-import StatusCode from "../enums/StatusCode";
-import { create, findAll } from "../services/product";
+import { Router } from 'express';
+import rescue from 'express-rescue';
+import StatusCode from '../enums/StatusCode';
+import { create, findAll } from '../services/product';
 import validate from './validations/validateProduct';
-import { verify } from "../utils/jwt";
+import { verify } from '../utils/jwt';
 
 const router = Router();
 
-router.post('/',
+router.post(
+  '/',
   validate,
   rescue(async (req, res) => {
-    const auth = req.headers.authorization
+    const auth = req.headers.authorization;
     verify(auth);
-    const newProduct: any = req.body;
-    const item = await create(newProduct);
-    res.status(StatusCode.CREATED).json({ item: item })
-  }));
+    const item = await create(req.body);
+    res.status(StatusCode.CREATED).json({ item });
+  }),
+);
 
-router.get('/',
+router.get(
+  '/',
   validate[2],
   rescue(async (req, res) => {
-    const auth = req.headers.authorization
+    const auth = req.headers.authorization;
     verify(auth);
     const allProduct = await findAll();
-    res.status(StatusCode.OK).json(allProduct)
-  }))
+    res.status(StatusCode.OK).json(allProduct);
+  }),
+);
 
 export default router;

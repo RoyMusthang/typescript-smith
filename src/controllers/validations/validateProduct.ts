@@ -46,10 +46,10 @@ const validAmount = (req: Request, res: Response, next: NextFunction) => {
 const validToken = async (req: Request, res: Response, next: NextFunction) => {
   const { authorization } = req.headers;
   if (!authorization) {
-    return res.status(StatusCode.UNAUTHORIZED).json({ error: 'Token not found' })
+    return res.status(StatusCode.UNAUTHORIZED).json({ error: 'Token not found' });
   }
   next();
-}
+};
 
 const validate = [validName, validAmount, validToken];
 
